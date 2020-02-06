@@ -22,7 +22,7 @@ package com.example.googlemap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private Marker myMarker,myMaker_1,myMaker_2,myMaker_3,myMaker_4,myMaker_5;
+    private Marker myMarker,myMaker_1,myMaker_2,myMaker_3,myMaker_4,myMaker_5,myMaker_6;
     private TextView tvSpotInfo;
     private Button btnAdd;
 
@@ -53,6 +53,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng museum_of_fight = new LatLng(47.518189, -122.296373);
         LatLng space_needle = new LatLng(47.620745, -122.349202);
         LatLng sky_view_observatory = new LatLng(47.605353, -122.330442);
+        LatLng green_lake_park = new LatLng(47.680544, -122.328450);
+        LatLng japanese_garden = new LatLng(47.640720, -122.297677);
+
 
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
@@ -71,24 +74,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         //set markers for attraciton spots
-        myMaker_1 = googleMap.addMarker(new MarkerOptions()
-                .position(chihuly_glass_and_garden)
-                .title("Chihuly Glass and Garden"));
+//        myMaker_1 = googleMap.addMarker(new MarkerOptions()
+//                .position(chihuly_glass_and_garden)
+//                .title("Chihuly Glass and Garden"));
 
+//        myMaker_2 = googleMap.addMarker(new MarkerOptions()
+//                .position(pike_place_market)
+//                .title("Pike Place Market"));
         myMaker_2 = googleMap.addMarker(new MarkerOptions()
-                .position(pike_place_market)
-                .title("Pike Place Market"));
+                .position(japanese_garden)
+                .title("Japanese Garden"));
 
         myMaker_3 = googleMap.addMarker(new MarkerOptions()
                 .position(museum_of_fight)
-                .title("Museum of Filght"));
+                .title("Museum of Flight"));
 
         myMaker_4 = googleMap.addMarker(new MarkerOptions()
                 .position(space_needle)
                 .title("Space Needle"));
 
-
         myMaker_5 = googleMap.addMarker(new MarkerOptions()
+                .position(green_lake_park)
+                .title("Green Lake Park"));
+
+        myMaker_6 = googleMap.addMarker(new MarkerOptions()
                 .position(sky_view_observatory)
                 .title("Sky View Observatory"));
 
