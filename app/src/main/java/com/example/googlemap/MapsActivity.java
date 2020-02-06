@@ -22,7 +22,7 @@ package com.example.googlemap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private Marker myMarker;
+    private Marker myMarker,myMaker_1,myMaker_2,myMaker_3,myMaker_4,myMaker_5;
     private TextView tvSpotInfo;
     private Button btnAdd;
 
@@ -47,6 +47,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng seattle = new LatLng(47.608, -122.335);
+
+        LatLng chihuly_glass_and_garden = new LatLng(47.622057, -122.350011);
+        LatLng pike_place_market = new LatLng(47.609306, -122.341806);
+        LatLng museum_of_fight = new LatLng(47.518189, -122.296373);
+        LatLng space_needle = new LatLng(47.620745, -122.349202);
+        LatLng sky_view_observatory = new LatLng(47.605353, -122.330442);
+
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
@@ -62,6 +69,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .position(seattle)
                 .title("My Spot")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        //set markers for attraciton spots
+        myMaker_1 = googleMap.addMarker(new MarkerOptions()
+                .position(chihuly_glass_and_garden)
+                .title("Chihuly Glass and Garden"));
+
+        myMaker_2 = googleMap.addMarker(new MarkerOptions()
+                .position(pike_place_market)
+                .title("Pike Place Market"));
+
+        myMaker_3 = googleMap.addMarker(new MarkerOptions()
+                .position(museum_of_fight)
+                .title("Museum of Filght"));
+
+        myMaker_4 = googleMap.addMarker(new MarkerOptions()
+                .position(space_needle)
+                .title("Space Needle"));
+
+
+        myMaker_5 = googleMap.addMarker(new MarkerOptions()
+                .position(sky_view_observatory)
+                .title("Sky View Observatory"));
+
+
+
     }
 
     @Override
