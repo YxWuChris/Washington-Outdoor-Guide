@@ -5,6 +5,7 @@ package com.example.googlemap;
         import android.view.View;
         import android.widget.Button;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import androidx.fragment.app.FragmentActivity;
 
@@ -22,9 +23,12 @@ package com.example.googlemap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private Marker myMarker;
+    private Marker myMaker_1,myMaker_2,myMaker_3,myMaker_4,myMaker_5;;
     private TextView tvSpotInfo;
     private Button btnAdd;
+    private Button btnDone;
+    DBHelper myDb;
+    public static Marker myMarker;
 
 
     @Override
@@ -36,7 +40,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         tvSpotInfo = (TextView) findViewById(R.id.spotInfo);
         btnAdd = (Button) findViewById(R.id.Add);
+        btnDone = (Button) findViewById(R.id.Done);
         btnAdd.setVisibility(View.INVISIBLE);
+        btnDone.setVisibility(View.INVISIBLE);
+        myDb = new DBHelper(this);
 
     }
 
@@ -46,38 +53,69 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         // Add a marker in Sydney, Australia, and move the camera.
-        LatLng seattle = new LatLng(47.608, -122.335);
+        //LatLng seattle = new LatLng(47.608, -122.335);
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
+        LatLng chihuly_glass_and_garden = new LatLng(47.622057, -122.350011);
+        LatLng pike_place_market = new LatLng(47.609306, -122.341806);
+        LatLng museum_of_fight = new LatLng(47.518189, -122.296373);
+        LatLng space_needle = new LatLng(47.620745, -122.349202);
+        LatLng sky_view_observatory = new LatLng(47.605353, -122.330442);
+
         CameraUpdate center=
                 CameraUpdateFactory.newLatLng(new LatLng(47.608, -122.335));
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(10);
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(11);
 
         mMap.setOnMarkerClickListener(this);
 
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
-        myMarker = googleMap.addMarker(new MarkerOptions()
-                .position(seattle)
-                .title("My Spot")
+
+        myMaker_1 = googleMap.addMarker(new MarkerOptions()
+                .position(chihuly_glass_and_garden)
+                .title("Chihuly Glass and Garden")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        myMaker_2 = googleMap.addMarker(new MarkerOptions()
+                .position(pike_place_market)
+                .title("Pike Place Market")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        myMaker_3 = googleMap.addMarker(new MarkerOptions()
+                .position(museum_of_fight)
+                .title("Museum of Filght")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        myMaker_4 = googleMap.addMarker(new MarkerOptions()
+                .position(space_needle)
+                .title("Space Needle")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+
+        myMaker_5 = googleMap.addMarker(new MarkerOptions()
+                .position(sky_view_observatory)
+                .title("Sky View Observatory")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
     }
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
 
+        tvSpotInfo.setText(marker.getTitle());
+        btnAdd.setVisibility(View.VISIBLE);
+        btnDone.setVisibility(View.VISIBLE);
+        myMarker = marker;
 
 
-        if (marker.equals(myMarker))
-        {
-            //System.out.println("Hello, it works!!!!!!!!!!!!!!!!!!!!!!!");
-            tvSpotInfo.setText(myMarker.getTitle());
-            btnAdd.setVisibility(View.VISIBLE);
-
-        }
 
         return true;
+    }
+
+    public void addPlan(View v){
+        boolean isInserted = myDb.insertData(myMarker.getTitle());
+       if(isInserted == true) System.out.println("DB works!!!!!!!");
+
     }
 
     public void toPlanActivity(View v){
