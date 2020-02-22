@@ -57,11 +57,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        LatLng chihuly_glass_and_garden = new LatLng(47.622057, -122.350011);
-        LatLng pike_place_market = new LatLng(47.609306, -122.341806);
-        LatLng museum_of_fight = new LatLng(47.518189, -122.296373);
-        LatLng space_needle = new LatLng(47.620745, -122.349202);
-        LatLng sky_view_observatory = new LatLng(47.605353, -122.330442);
+        LatLng crystal_mountain = new LatLng(46.924846, -121.502764);
+        LatLng stevens_pass = new LatLng(47.745112, -121.088860);
+        LatLng mount_baker = new LatLng(48.775809, -121.814972);
+        LatLng snoqualmie_pass = new LatLng(47.421947,  -121.420619);
+        LatLng white_pass = new LatLng(46.639199, -121.390015);
 
         CameraUpdate center=
                 CameraUpdateFactory.newLatLng(new LatLng(47.608, -122.335));
@@ -73,28 +73,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
         myMaker_1 = googleMap.addMarker(new MarkerOptions()
-                .position(chihuly_glass_and_garden)
-                .title("Chihuly Glass and Garden")
+                .position(crystal_mountain)
+                .title("crystal mountain")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMaker_2 = googleMap.addMarker(new MarkerOptions()
-                .position(pike_place_market)
-                .title("Pike Place Market")
+                .position(stevens_pass)
+                .title("stevens pass")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMaker_3 = googleMap.addMarker(new MarkerOptions()
-                .position(museum_of_fight)
-                .title("Museum of Filght")
+                .position(mount_baker)
+                .title("mount baker")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMaker_4 = googleMap.addMarker(new MarkerOptions()
-                .position(space_needle)
-                .title("Space Needle")
+                .position(snoqualmie_pass)
+                .title("snoqualmie pass")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMaker_5 = googleMap.addMarker(new MarkerOptions()
-                .position(sky_view_observatory)
-                .title("Sky View Observatory")
+                .position(white_pass)
+                .title("white pass")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
     }
 
