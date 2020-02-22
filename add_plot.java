@@ -1,24 +1,23 @@
 package com.example.googlemap;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
-        import androidx.fragment.app.FragmentActivity;
-
-        import com.google.android.gms.maps.CameraUpdate;
-        import com.google.android.gms.maps.CameraUpdateFactory;
-        import com.google.android.gms.maps.GoogleMap;
-        import com.google.android.gms.maps.OnMapReadyCallback;
-        import com.google.android.gms.maps.SupportMapFragment;
-        import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
-        import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-        import com.google.android.gms.maps.model.LatLng;
-        import com.google.android.gms.maps.model.Marker;
-        import com.google.android.gms.maps.model.MarkerOptions;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.fragment.app.FragmentActivity;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
@@ -29,6 +28,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Button btnDone;
     DBHelper myDb;
     public static Marker myMarker;
+    private ImageView img;
 
 
     @Override
@@ -44,7 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         btnAdd.setVisibility(View.INVISIBLE);
         btnDone.setVisibility(View.INVISIBLE);
         myDb = new DBHelper(this);
-
+        img= (ImageView) findViewById(R.id.image);
     }
 
     @Override
@@ -68,9 +68,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CameraUpdate zoom=CameraUpdateFactory.zoomTo(11);
 
         mMap.setOnMarkerClickListener(this);
-
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         myMaker_1 = googleMap.addMarker(new MarkerOptions()
                 .position(chihuly_glass_and_garden)
@@ -92,7 +92,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Space Needle")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
-
         myMaker_5 = googleMap.addMarker(new MarkerOptions()
                 .position(sky_view_observatory)
                 .title("Sky View Observatory")
@@ -102,12 +101,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public boolean onMarkerClick(final Marker marker) {
 
+        img.setImageResource(R.drawable.seattle);
         tvSpotInfo.setText(marker.getTitle());
         btnAdd.setVisibility(View.VISIBLE);
         btnDone.setVisibility(View.VISIBLE);
         myMarker = marker;
-
-
 
         return true;
     }
@@ -121,7 +119,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void toPlanActivity(View v){
         Intent intent = new Intent(this, PlanActivity.class);
         startActivity(intent);
-
 
     }
 
