@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/camping_tips"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:text="Camping Safety Tips"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="65px"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_dark"/>
+
+
+    <TextView
+        android:id="@+id/camping_tips_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From https://koa.com/blog/camping-safety-tips/"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="24px"
+        android:autoLink="web"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/camping_tip1_separator"
+        android:visibility="visible"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/camping_tip1_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. CHOOSE THE RIGHT SHELTER AND SITE"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip1_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/camping_tip1_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Consider ages, physical and medical needs and limitation for you and your accompanies."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip1_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Determine the necessary amenities and where you shold stan, in a tent, cabin or RV."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip1_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Determine what gear you need based on your site choice."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip2_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. STAY UP-TO-DATE WITH THE WEATHER"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip2_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip2_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Pay attention to the weather forecast when plan the camping."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip2_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Pack for inclement weather regardless of forecast."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+
+    <TextView
+        android:id="@+id/camping_tip3_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. PACK AND STORE FOOD SAFELY"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        android:textSize="50px"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip3_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/camping_tip3_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Pay attention to the the containers for food, tight and waterproof containers are recommended."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip3_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Prepare an isolated cooler for foods."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip3_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Always wash hands before touching the food and seperate raw foods from cookced foods."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+
+    <TextView
+        android:id="@+id/camping_tip4_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. PRACTICE CAMPFIRE SAFETY"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip4_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/camping_tip4_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Campfires should be at least 15 feets from tent walls. shrubs and trees."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip4_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Keep fire small and never leave it unattended."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip4_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Keep a water bucket nearby at all times and always put your fire out before leaving or going to sleep."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+    <TextView
+        android:id="@+id/camping_tip5_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. USE INSECT PROTECTION"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip5_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/camping_tip5_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Use insect repellent with DEET to protect yourself from mosquitoes, ticks and other insects."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip5_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Check for ticks daily and wear long sleeves and pants when hiking."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip5_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="•  When you come indoors or after your trip is over, put already-dry clothes in a dryer for at least 10 minutes on high heat to kill ticks on clothing."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+
+    <TextView
+        android:id="@+id/camping_tip6_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. BE AWARE OF ALLERGIES"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip6_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/camping_tip6_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Keep an eye out for dizziness, labored breathing and swelling around bite sites or places where plants may have made contact with skin."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip6_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• For known allergies, include an EpiPen or other prescrived medication in your first aid kit."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+    <TextView
+        android:id="@+id/camping_tip7_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7. PROTECT YOUR SKIN FROM THE SUN"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/camping_tip7_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip7_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• UV rays from the sun can burn you on both bright and cloudy days"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip7_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• During midday hours when the sun's rays are the strongest, seek shade and wear a hat and sunglasses."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip7_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Use broad-spectrum sunscreen and lip screen with at least SPF15."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip8_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8. STAY HYDRATED"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip8_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/camping_tip8_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Drink water often, don't wait until you are thirsty."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip8_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• A good emergency kit includes a 3-5 days supply of bottled water."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+    <TextView
+        android:id="@+id/camping_tip9_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9. WATCH OUT FOR WILDLIFE"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip9_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip9_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Store food in your car, a bear-safe canister or a food storage locker so as not to attract animals."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip9_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Avoid touching and feeding wild animals."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip9_para3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Wash you hands or use a hand sanitizer if you do touch the wildlife."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+    <TextView
+        android:id="@+id/camping_tip10_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10. HAVE FUN AND REMAIN ALERT"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="50px"
+        android:layout_marginTop="60dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/camping_tip10_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/camping_tip10_para1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Pay attention to how your body feels throughout your trip."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:id="@+id/camping_tip10_para2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="• Keep your wits about you by getting plenty of sleep and limiting alchol intake."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+    </LinearLayout>
+</ScrollView>

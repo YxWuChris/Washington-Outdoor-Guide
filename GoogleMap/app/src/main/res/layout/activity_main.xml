@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:width="1dp"
+        android:color="@android:color/darker_gray"
+        android:shape="rectangle">
+
+    </SearchView>
+
+    <ImageButton
+        android:id="@+id/seattle"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:onClick="toCity1Activity"
+        android:scaleType="matrix"
+        android:src="@drawable/camping">
+
+    </ImageButton>
+
+
+    <ImageButton
+        android:id="@+id/hiking"
+        android:layout_width="421dp"
+        android:layout_height="195dp"
+        android:onClick="toCity2Activity"
+        android:scaleType="matrix"
+        android:src="@drawable/hiking">
+
+    </ImageButton>
+
+
+</LinearLayout>
