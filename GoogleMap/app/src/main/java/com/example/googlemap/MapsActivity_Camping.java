@@ -102,11 +102,11 @@ public class MapsActivity_Camping extends FragmentActivity implements OnMapReady
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        if(marker.equals(myMarker_1)) img.setImageResource(R.drawable.crystal_mountain);
-        else if(marker.equals(myMarker_2)) img.setImageResource(R.drawable.stevens_pass);
-        else if(marker.equals(myMarker_3)) img.setImageResource(R.drawable.mount_baker);
-        else if(marker.equals(myMarker_4)) img.setImageResource(R.drawable.snoqualmie_pass);
-        else if(marker.equals(myMarker_5)) img.setImageResource(R.drawable.white_pass);
+        if(marker.equals(myMarker_1)) img.setImageResource(R.drawable.royal_basin_campsite);
+        else if(marker.equals(myMarker_2)) img.setImageResource(R.drawable.lake_pleasant_rv_park);
+        else if(marker.equals(myMarker_3)) img.setImageResource(R.drawable.park_lake_day_camp);
+        else if(marker.equals(myMarker_4)) img.setImageResource(R.drawable.harry_osbourne_cowboy_campsite);
+        else if(marker.equals(myMarker_5)) img.setImageResource(R.drawable.cle_elum_river_group_site);
         tvSpotInfo.setText(marker.getTitle());
         btnAdd.setVisibility(View.VISIBLE);
         btnDone.setVisibility(View.VISIBLE);
