@@ -20,7 +20,7 @@ public class City1Activity  extends AppCompatActivity {
     }
 
     public void toCityStory(View v){
-        Intent intent = new Intent(this, CityStory.class);
+        Intent intent = new Intent(this, SkiingTips.class);
         startActivity(intent);
     }
 

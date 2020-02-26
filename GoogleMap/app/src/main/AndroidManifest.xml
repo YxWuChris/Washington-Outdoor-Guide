@@ -37,6 +37,14 @@
             android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <activity
+            android:name=".SkiingTips"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
 
         <activity
             android:name="com.example.googlemap.LoginActivity"

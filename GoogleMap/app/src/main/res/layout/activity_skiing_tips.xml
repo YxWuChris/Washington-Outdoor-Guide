@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/skiing_tips"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:text="Skiing Safety Tips For Bignners"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="65px"
+            android:textStyle="bold"
+            android:background="@android:color/holo_blue_dark"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tips_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From https://www.skimag.com/ski-performance/top-10-tips-beginners"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="24px"
+            android:autoLink="web"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/holo_blue_dark"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/skiing_tip1_separator"
+            android:visibility="visible"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/skiing_tip1_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. BEND YOUR KNEES"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip1_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/skiing_tip1_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Bending your knees does a number of things; it forces you to shove your shins into the front of the boot, gaining control of your ski."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/camping_tip1_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="•  It also centers your upper body above your legs, keeping your balance over your sweet spot."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tip2_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. GET A LESSON"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip2_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/skiing_tip2_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Getting a lesson from someone trained to teach you how to ski will help you learn skiing efficiently. "
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/camping_tip2_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Many options are available for a variety of different levels."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip3_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. GO SLOW HAVE PATIENCE"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:layout_marginTop="60dp"
+            android:textSize="50px"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip3_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/skiing_tip3_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Have reasonable expectations of your abilities."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip3_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Once there, talk with your instructor about what you are doing wrong and what your goals are."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip4_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. DRESS APPROPRIATELY"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip4_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/skiing_tip4_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Proper fitting boots are the most important item on that list.."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip4_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• You should also rent or buy a pair of snowpants.."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip4_para3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• A helmet is also a wise investment as well as a pair of gloves."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tip5_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. PICK THE RIGHT RESORT"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip5_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/skiing_tip5_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Look for resorts that have excellent grooming, family programs, and ski schools.."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip6_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. DON'T BE AFRAID TO FALL"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip6_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/skiing_tip6_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Try to fall to your side versus forwards or backwards, which might make you twist something. ."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip6_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• If you fall, self-arrest yourself so that you don't slide down the slope and either run into or over something."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tip7_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. START OUT ON THE RIGHT TYPE OF TERRIAN"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/skiing_tip7_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/skiing_tip7_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• When starting out, look to see if your resort has a magic carpet or Poma lift so that you can build up to a chairlift."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip7_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Really honing your technique before you head to a blue (intermediate) will only make you a better skier overall. ."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+    </LinearLayout>
+</ScrollView>
