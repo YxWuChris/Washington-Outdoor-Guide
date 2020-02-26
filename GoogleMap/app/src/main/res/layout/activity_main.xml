@@ -17,21 +17,31 @@
     </SearchView>
 
     <ImageButton
-        android:id="@+id/seattle"
-        android:layout_width="match_parent"
-        android:layout_height="198dp"
+        android:id="@+id/skiing"
+        android:layout_width="421dp"
+        android:layout_height="195dp"
         android:onClick="toCity1Activity"
         android:scaleType="matrix"
-        android:src="@drawable/camping">
+        android:src="@drawable/skiing">
 
     </ImageButton>
 
 
     <ImageButton
+        android:id="@+id/seattle"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:onClick="toCamping"
+        android:scaleType="matrix"
+        android:src="@drawable/camping">
+
+    </ImageButton>
+
+    <ImageButton
         android:id="@+id/hiking"
         android:layout_width="421dp"
         android:layout_height="195dp"
-        android:onClick="toCity2Activity"
+        android:onClick="toCity1Activity"
         android:scaleType="matrix"
         android:src="@drawable/hiking">
 

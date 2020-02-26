@@ -11,7 +11,7 @@
      android:layout_width="170dp"
      android:layout_height="50dp"
      android:onClick="toCityPage"
-     android:text="City Page"
+     android:text="Activities"
      app:layout_constraintBottom_toTopOf="@+id/button5"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"

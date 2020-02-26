@@ -8,7 +8,6 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name = "android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -40,14 +39,32 @@
 
 
         <activity
-            android:name="com.example.googlemap.City1Activity"
+            android:name="com.example.googlemap.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize">
         </activity>
+
         <activity
-            android:name="com.example.googlemap.City2Activity"
+            android:name="com.example.googlemap.SignUpActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name="com.example.googlemap.CampingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+
+        <activity
+            android:name="com.example.googlemap.City1Activity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"
@@ -96,10 +113,6 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-        </activity>
-        <activity
-            android:name=".MapsActivity_Camping"
             android:label="@string/title_activity_maps">
         </activity>
     </application>

@@ -14,7 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Student.db";
     public static final String TABLE_NAME = "student_table";
     public static final String COL_1 = "ID";
-    public static final String COL_2 = "KEYNAME";
+    public static final String COL_2 = "NAME";
 
 
     public DBHelper(Context context) {
@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, KEYNAME TEXT unique)");
+        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, NAME TEXT unique)");
     }
 
     @Override

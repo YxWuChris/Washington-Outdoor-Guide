@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="271dp"
-        android:src="@raw/seattle"></ImageView>
+        android:src="@drawable/skiingmenu"></ImageView>
 
     <Button
         android:id="@+id/button"
@@ -16,12 +16,6 @@
         android:layout_height="wrap_content"
         android:onClick="toCityStory"
         android:text="Safety Tips" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Poplular Spots" />
 
     <Button
         android:id="@+id/button3"

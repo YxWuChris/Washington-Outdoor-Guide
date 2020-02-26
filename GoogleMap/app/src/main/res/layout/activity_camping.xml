@@ -8,7 +8,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="271dp"
-        android:src="@raw/seattle"></ImageView>
+        android:src="@drawable/campingmenu">
+
+    </ImageView>
 
     <Button
         android:id="@+id/button"

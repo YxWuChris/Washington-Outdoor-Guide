@@ -38,8 +38,8 @@ public class CityStory extends AppCompatActivity {
         tip5= (ImageView) findViewById(R.id.camping_tip5_image);
         tip5.setImageResource(R.drawable.camping_tip5);
 
-//        tip6= (ImageView) findViewById(R.id.camping_tip6_image);
-//        tip6.setImageResource(R.drawable.camping_tip6);
+        tip6= (ImageView) findViewById(R.id.camping_tip6_image);
+        tip6.setImageResource(R.drawable.camping_tip6);
 
         tip7= (ImageView) findViewById(R.id.camping_tip7_image);
         tip7.setImageResource(R.drawable.camping_tip7);
