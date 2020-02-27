@@ -17,14 +17,14 @@ public class CampingActivity  extends AppCompatActivity {
     }
 
     public void toCityStory(View v){
-        Intent intent = new Intent(this, SkiingTips.class);
+        Intent intent = new Intent(this, CampingTips.class);
         startActivity(intent);
     }
 
 
 
     public void toCityMap(View v){
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, MapsActivityCamping.class);
         startActivity(intent);
     }
 

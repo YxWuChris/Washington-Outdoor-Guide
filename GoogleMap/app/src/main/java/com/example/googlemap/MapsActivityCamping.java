@@ -7,21 +7,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.fragment.app.FragmentActivity;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.net.URI;
-
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
+public class MapsActivityCamping extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
     private GoogleMap mMap;
     private Marker myMarker_1, myMarker_2,myMarker_3,myMarker_4,myMarker_5;
@@ -36,7 +36,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_maps_camping);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -59,11 +59,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        LatLng crystal_mountain = new LatLng(46.924846, -121.502764);
-        LatLng stevens_pass = new LatLng(47.745112, -121.088860);
-        LatLng mount_baker = new LatLng(48.775809, -121.814972);
-        LatLng snoqualmie_pass = new LatLng(47.421947,  -121.420619);
-        LatLng white_pass = new LatLng(46.639199, -121.390015);
+        LatLng royal_basin_campsite = new LatLng(47.833244, -123.211992);
+        LatLng lake_pleasant_rv_park = new LatLng(47.791633, -122.214642);
+        LatLng park_lake_day_camp = new LatLng(47.512806, -122.343582);
+        LatLng harry_osbourne_cowboy_campsite = new LatLng(48.548041, -121.979707);
+        LatLng cle_elum_river_group_site = new LatLng(47.456457, -121.126053);
 
         CameraUpdate center=
                 CameraUpdateFactory.newLatLng(new LatLng(47.608, -122.335));
@@ -76,38 +76,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
 
         myMarker_1 = googleMap.addMarker(new MarkerOptions()
-                .position(crystal_mountain)
-                .title("crystal mountain")
+                .position(royal_basin_campsite)
+                .title("royal basin campsite")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMarker_2 = googleMap.addMarker(new MarkerOptions()
-                .position(stevens_pass)
-                .title("stevens pass")
+                .position(lake_pleasant_rv_park)
+                .title("lake pleasant rv park")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMarker_3 = googleMap.addMarker(new MarkerOptions()
-                .position(mount_baker)
-                .title("mount baker")
+                .position(park_lake_day_camp)
+                .title("park lake day camp")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMarker_4 = googleMap.addMarker(new MarkerOptions()
-                .position(snoqualmie_pass)
-                .title("snoqualmie pass")
+                .position(harry_osbourne_cowboy_campsite)
+                .title("harry osbourne cowboy campsite")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         myMarker_5 = googleMap.addMarker(new MarkerOptions()
-                .position(white_pass)
-                .title("white pass")
+                .position(cle_elum_river_group_site)
+                .title("cle elum river group site")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
     }
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        if(marker.equals(myMarker_1)) img.setImageResource(R.drawable.crystal_mountain);
-        else if(marker.equals(myMarker_2)) img.setImageResource(R.drawable.stevens_pass);
-        else if(marker.equals(myMarker_3)) img.setImageResource(R.drawable.mount_baker);
-        else if(marker.equals(myMarker_4)) img.setImageResource(R.drawable.snoqualmie_pass);
-        else if(marker.equals(myMarker_5)) img.setImageResource(R.drawable.white_pass);
+        if(marker.equals(myMarker_1)) img.setImageResource(R.drawable.royal_basin_campsite);
+        else if(marker.equals(myMarker_2)) img.setImageResource(R.drawable.lake_pleasant_rv_park);
+        else if(marker.equals(myMarker_3)) img.setImageResource(R.drawable.park_lake_day_camp);
+        else if(marker.equals(myMarker_4)) img.setImageResource(R.drawable.harry_osbourne_cowboy_campsite);
+        else if(marker.equals(myMarker_5)) img.setImageResource(R.drawable.cle_elum_river_group_site);
         tvSpotInfo.setText(marker.getTitle());
         btnAdd.setVisibility(View.VISIBLE);
         btnDone.setVisibility(View.VISIBLE);
@@ -117,7 +117,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void addPlan(View v){
-        boolean isInserted = myDb.insertData(myMarker.getTitle(),"Skiing");
+        boolean isInserted = myDb.insertData(myMarker.getTitle(),"Camping");
        if(isInserted == true) System.out.println("DB works!!!!!!!");
 
     }
@@ -129,20 +129,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void getInfo(View v){
-
-
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        if (myMarker.getTitle().equals("crystal mountain")) intent.setData(Uri.parse("https://www.crystalmountainresort.com"));
-        else if (myMarker.getTitle().equals("stevens pass")) intent.setData(Uri.parse("https://www.stevenspass.com"));
-        else if (myMarker.getTitle().equals("mount baker")) intent.setData(Uri.parse("https://www.mtbaker.us"));
-        else if (myMarker.getTitle().equals("snoqualmie pass")) intent.setData(Uri.parse("https://summitatsnoqualmie.com"));
-        else if (myMarker.getTitle().equals("white pass")) intent.setData(Uri.parse("https://skiwhitepass.com/"));
+        if (myMarker.getTitle().equals("royal basin campsite")) intent.setData(Uri.parse("https://www.nps.gov/olym/planyourvisit/royal-basin.htm"));
+        else if (myMarker.getTitle().equals("lake pleasant rv park")) intent.setData(Uri.parse("https://www.goodsam.com/campgrounds-rv-parks/washington/bothell/lake-pleasant-rv-park-890001015/"));
+        else if (myMarker.getTitle().equals("park lake day camp")) intent.setData(Uri.parse("https://www.manta.com/d/mm6zncx/park-lake-day-camp"));
+        else if (myMarker.getTitle().equals("harry osbourne cowboy campsite")) intent.setData(Uri.parse("https://thedyrt.com/camping/washington/harry-o-s-cowboy-camp"));
+        else if (myMarker.getTitle().equals("cle elum river group site")) intent.setData(Uri.parse("https://www.recreation.gov/camping/campgrounds/233682"));
         startActivity(intent);
     }
 
 
 
-
-}
+    }

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CityStory extends AppCompatActivity {
+public class CampingTips extends AppCompatActivity {
 
     private ImageView img,tip1,tip2,tip3,tip4,tip5,tip6,tip7,tip8,tip9,tip10;
 
@@ -18,7 +18,6 @@ public class CityStory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.city_story);

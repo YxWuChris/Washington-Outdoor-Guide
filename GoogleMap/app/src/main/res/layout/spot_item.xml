@@ -14,11 +14,19 @@
         android:layout_height="50dp" />
 
     <TextView
-        android:id="@+id/book_id"
+        android:id="@+id/spotType"
         android:gravity="center"
         android:layout_weight="1"
-        android:text="ID"
+        android:text="Type"
         android:layout_width="0dp"
         android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="toNote"
+        android:text="Note" />
 
 </LinearLayout>

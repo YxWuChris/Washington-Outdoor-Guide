@@ -15,6 +15,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "student_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
+    public static final String COL_3 = "TYPE";
 
 
     public DBHelper(Context context) {
@@ -23,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, NAME TEXT unique)");
+        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, NAME TEXT unique, TYPE TEXT)");
     }
 
     @Override
@@ -32,10 +33,11 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String name) {
+    public boolean insertData(String name, String type) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,name);
+        contentValues.put(COL_3,type);
         long result = db.insertWithOnConflict(TABLE_NAME,null ,contentValues , SQLiteDatabase.CONFLICT_REPLACE);
         if(result == -1)
             return false;

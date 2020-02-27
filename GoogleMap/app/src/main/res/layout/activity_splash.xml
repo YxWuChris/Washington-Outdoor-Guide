@@ -16,7 +16,7 @@
             android:id="@+id/pathView"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            app:svg="@raw/test" />
+            app:svg="@raw/wog" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:text="By Chris Wu" />
+            android:text="By Chris Wu, Iris Zheng" />
 
 
     </LinearLayout>

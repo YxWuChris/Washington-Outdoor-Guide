@@ -10,9 +10,6 @@
         android:onClick="deleteAll"
         android:text="Delete All" />
 
-    <include layout="@layout/spot_item">
-    </include>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Recycler_View"

@@ -38,8 +38,8 @@ public class SplashActivity extends AppCompatActivity {
         //mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Intent i;
         //if (mSharedPreferences.getString(USER_TOKEN, null) != null) {
-         //i = MenuActivity.getStartIntent(SplashActivity.this);//password
-        i = LoginActivity.getStartIntent(SplashActivity.this);//password
+        i = MenuActivity.getStartIntent(SplashActivity.this);//password
+        //i = LoginActivity.getStartIntent(SplashActivity.this);//password
         //} else {
           //  i = LoginActivity.getStartIntent(SplashActivity.this);
         //}
