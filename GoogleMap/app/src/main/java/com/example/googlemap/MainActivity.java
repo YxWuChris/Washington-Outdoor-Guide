@@ -16,7 +16,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     private SearchView search;
-    private ImageButton btn1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         search = (SearchView) findViewById(R.id.search);
         search.setBackgroundResource(R.drawable.searchview_rounded);
-        btn1 = (ImageButton) findViewById(R.id.seattle);
-
     }
 
     public static Intent getStartIntent(Context context) {
@@ -33,14 +31,24 @@ public class MainActivity extends AppCompatActivity {
         return intent;
     }
 
-    public void toCity1Activity(View v) {
-      Intent intent = new Intent(this, City1Activity.class);
+    public void toSnowActivity(View v) {
+      Intent intent = new Intent(this, SnowActivity.class);
         startActivity(intent);
     }
 
 
-    public void toCamping(View v){
-        Intent intent = new Intent(this, CampingActivity.class);
+    public void toHikingCampingActivity(View v){
+        Intent intent = new Intent(this, HikingCampingActivity.class);
+        startActivity(intent);
+    }
+
+    public void toWaterActivity(View v){
+        Intent intent = new Intent(this, WaterActivity.class);
+        startActivity(intent);
+    }
+
+    public void toFlightActivity(View v){
+        Intent intent = new Intent(this, FlightActivity.class);
         startActivity(intent);
     }
 }

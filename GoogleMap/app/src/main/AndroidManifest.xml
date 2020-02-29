@@ -54,21 +54,29 @@
         </activity>
 
         <activity
-            android:name=".SkiingTips"
+            android:name=".SnowActivity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize">
         </activity>
-
 
         <activity
-            android:name=".CampingTips"
+            android:name=".WaterActivity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize">
         </activity>
+
+        <activity
+            android:name=".FlightActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
 
         <activity
             android:name="com.example.googlemap.LoginActivity"
@@ -80,23 +88,6 @@
 
         <activity
             android:name="com.example.googlemap.SignUpActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppThemeNoBar"
-            android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-
-        <activity
-            android:name="com.example.googlemap.CampingActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppThemeNoBar"
-            android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
-
-
-        <activity
-            android:name="com.example.googlemap.City1Activity"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"
@@ -116,6 +107,30 @@
 
         <activity
             android:name="com.example.googlemap.PlanActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name="com.example.googlemap.HikingCampingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name="com.example.googlemap.SnowRecom"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name="com.example.googlemap.HikingRecom"
             android:label="@string/app_name"
             android:theme="@style/AppThemeNoBar"
             android:configChanges="orientation|screenSize"

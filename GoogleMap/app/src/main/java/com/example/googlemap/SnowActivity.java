@@ -10,27 +10,20 @@ import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class City1Activity  extends AppCompatActivity {
+public class SnowActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.city1_activity);
+        setContentView(R.layout.activity_snow);
 
 
     }
 
     public void toCityStory(View v){
-        Intent intent = new Intent(this, SkiingTips.class);
+        Intent intent = new Intent(this, SnowRecom.class);
         startActivity(intent);
     }
 
-    public void test(View v){
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("http://www.baidu.com"));
-        startActivity(intent);
-    }
 
     public void toCityMap(View v){
         Intent intent = new Intent(this, MapsActivity.class);

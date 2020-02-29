@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-public class SkiingTips extends AppCompatActivity {
+public class SnowRecom extends AppCompatActivity {
     private ImageView img,tip1,tip2,tip3,tip4,tip5,tip6,tip7;
     @Override
 

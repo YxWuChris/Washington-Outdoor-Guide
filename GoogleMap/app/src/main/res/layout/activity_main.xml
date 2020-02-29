@@ -17,10 +17,10 @@
     </SearchView>
 
     <ImageButton
-        android:id="@+id/skiing"
+        android:id="@+id/SnowActivity"
         android:layout_width="421dp"
-        android:layout_height="195dp"
-        android:onClick="toCity1Activity"
+        android:layout_height="164dp"
+        android:onClick="toSnowActivity"
         android:scaleType="matrix"
         android:src="@drawable/skiing">
 
@@ -28,20 +28,30 @@
 
 
     <ImageButton
-        android:id="@+id/seattle"
+        android:id="@+id/HikingCampingActivity"
         android:layout_width="match_parent"
-        android:layout_height="198dp"
-        android:onClick="toCamping"
+        android:layout_height="145dp"
+        android:onClick="toHikingCampingActivity"
         android:scaleType="matrix"
         android:src="@drawable/camping">
 
     </ImageButton>
 
     <ImageButton
-        android:id="@+id/hiking"
+        android:id="@+id/WaterActivity"
         android:layout_width="421dp"
-        android:layout_height="195dp"
-        android:onClick="toCity1Activity"
+        android:layout_height="156dp"
+        android:onClick="toWaterActivity"
+        android:scaleType="matrix"
+        android:src="@drawable/hiking">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/FlightActivity"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:onClick="toFlightActivity"
         android:scaleType="matrix"
         android:src="@drawable/hiking">
 

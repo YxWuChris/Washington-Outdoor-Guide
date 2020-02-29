@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CampingActivity  extends AppCompatActivity {
+public class HikingCampingActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class CampingActivity  extends AppCompatActivity {
     }
 
     public void toCityStory(View v){
-        Intent intent = new Intent(this, CampingTips.class);
+        Intent intent = new Intent(this, HikingRecom.class);
         startActivity(intent);
     }
 
