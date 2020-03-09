@@ -5,26 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+ <View
+     android:id="@+id/view"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@drawable/pixel"
+     tools:ignore="MissingConstraints"
+     tools:layout_editor_absoluteX="0dp"
+     tools:layout_editor_absoluteY="0dp">
 
- <Button
-     android:id="@+id/button4"
-     android:layout_width="170dp"
-     android:layout_height="50dp"
-     android:onClick="toCityPage"
-     android:text="Activities"
-     app:layout_constraintBottom_toTopOf="@+id/button5"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent" />
+ </View>
 
- <Button
-     android:id="@+id/button5"
-     android:layout_width="176dp"
-     android:layout_height="46dp"
-     android:layout_marginBottom="244dp"
-     android:onClick="toPlanPage"
-     android:text="Plan"
+ <TextView
+     android:id="@+id/textView3"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Welcome, Explorer!"
+     android:textColor="@color/white"
+     android:textSize="26dp"
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent" />
+     app:layout_constraintHorizontal_bias="0.183"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.079" />
+
+
+ <ImageView
+     android:id="@+id/imageView3"
+     android:layout_width="300dp"
+     android:layout_height="167dp"
+     android:onClick="toActivityPage"
+     app:layout_constraintBottom_toBottomOf="@+id/view"
+     app:layout_constraintEnd_toEndOf="@+id/view"
+     app:layout_constraintHorizontal_bias="0.504"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.458"
+     app:srcCompat="@drawable/activities" />
+
+ <ImageView
+     android:id="@+id/imageView2"
+     android:layout_width="290dp"
+     android:layout_height="160dp"
+     app:layout_constraintBottom_toBottomOf="@+id/view"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.508"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.793"
+     android:onClick="toPlanPage"
+     app:srcCompat="@drawable/myplan" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

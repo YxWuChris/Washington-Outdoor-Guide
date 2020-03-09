@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        search = (SearchView) findViewById(R.id.search);
-        search.setBackgroundResource(R.drawable.searchview_rounded);
+//        search = (SearchView) findViewById(R.id.search);
+//        search.setBackgroundResource(R.drawable.searchview_rounded);
     }
 
     public static Intent getStartIntent(Context context) {

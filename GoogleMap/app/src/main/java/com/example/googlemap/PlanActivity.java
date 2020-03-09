@@ -19,11 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlanActivity extends AppCompatActivity {
+public class PlanActivity extends AppCompatActivity implements SpotAdapter.OnNoteListener {
 
 
     DBHelper myDb;
     private List<Spot> SpotList=new ArrayList<>();
+
 
 
     @Override
@@ -35,7 +36,7 @@ public class PlanActivity extends AppCompatActivity {
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.Recycler_View);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        SpotAdapter spotAdapter=new SpotAdapter(SpotList);
+        SpotAdapter spotAdapter=new SpotAdapter(SpotList,this);
         recyclerView.setAdapter(spotAdapter);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
@@ -53,8 +54,9 @@ public class PlanActivity extends AppCompatActivity {
            // buffer.append("Id :"+ res.getString(0)+"\n");
             String name = res.getString(1);
             String type = res.getString(2);
+            String note = res.getString(3);
             buffer.append("Name :"+ res.getString(1)+"\n");
-            Spot spot=new Spot(name,type);
+            Spot spot=new Spot(name,type,note);
             SpotList.add(spot);
         }
 
@@ -66,12 +68,9 @@ public class PlanActivity extends AppCompatActivity {
 
     }
 
-    public void toNote(View v){
-        Intent intent = new Intent(this, NoteActivity.class);
-        startActivity(intent);
-    }
 
-    ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | ItemTouchHelper.DOWN | ItemTouchHelper.UP) {
+
+    ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
 
         @Override
         public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
@@ -81,11 +80,14 @@ public class PlanActivity extends AppCompatActivity {
 
         @Override
         public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
-            Toast.makeText(PlanActivity.this, "on Swiped ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PlanActivity.this, "Deletted!", Toast.LENGTH_SHORT).show();
             //Remove swiped item from list and notify the RecyclerView
             int position = viewHolder.getAdapterPosition();
+
+            String name = SpotList.get(position).getName();
+            myDb.deleteData (name);
             SpotList.remove(position);
-            //spotAdapter.notifyDataSetChanged();
+//            spotAdapter.notifyDataSetChanged();
 
         }
     };
@@ -101,8 +103,17 @@ public class PlanActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onNoteClick(int position) {
 
-
-
+        String note = SpotList.get(position).getNote();
+        String name = SpotList.get(position).getName();
+        Toast.makeText(this,note,Toast.LENGTH_LONG);
+        Intent intent = new Intent(this, NoteActivity.class);
+        intent.putExtra("note",note);
+        intent.putExtra("name",name);
+        startActivity(intent);
+        finish();
+    }
 }
 

@@ -1,61 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <SearchView
-        android:id="@+id/search"
+    <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:width="1dp"
-        android:color="@android:color/darker_gray"
-        android:shape="rectangle">
-
-    </SearchView>
-
-    <ImageButton
-        android:id="@+id/SnowActivity"
-        android:layout_width="421dp"
-        android:layout_height="164dp"
-        android:onClick="toSnowActivity"
-        android:scaleType="matrix"
-        android:src="@drawable/skiing">
-
-    </ImageButton>
+        android:background="@drawable/pixel"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
-    <ImageButton
-        android:id="@+id/HikingCampingActivity"
-        android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:onClick="toHikingCampingActivity"
-        android:scaleType="matrix"
-        android:src="@drawable/camping">
-
-    </ImageButton>
-
-    <ImageButton
-        android:id="@+id/WaterActivity"
-        android:layout_width="421dp"
-        android:layout_height="156dp"
-        android:onClick="toWaterActivity"
-        android:scaleType="matrix"
-        android:src="@drawable/hiking">
-
-    </ImageButton>
-
-    <ImageButton
-        android:id="@+id/FlightActivity"
-        android:layout_width="match_parent"
-        android:layout_height="167dp"
-        android:onClick="toFlightActivity"
-        android:scaleType="matrix"
-        android:src="@drawable/hiking">
-
-    </ImageButton>
+    </View>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Explore Exciting Things in WA"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
 
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingTop="230dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/SnowActivity"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="toSnowActivity"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_snow">
+
+
+        </ImageView>
+
+
+        <ImageView
+            android:id="@+id/HikingCampingActivity"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:onClick="toHikingCampingActivity"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_camping"
+
+            >
+
+
+        </ImageView>
+
+
+    </LinearLayout>
+    >
+
+
+    <LinearLayout
+        android:id="@+id/menu_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingTop="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/menu_1">
+
+        <ImageView
+            android:id="@+id/FlightActivity"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick="toFlightActivity"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_air"></ImageView>
+
+        <ImageView
+            android:id="@+id/WaterActivity"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:onClick="toWaterActivity"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_water">
+
+        </ImageView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

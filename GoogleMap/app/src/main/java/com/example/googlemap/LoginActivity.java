@@ -85,11 +85,19 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                 break;
                 // Replace signup frgament with animation
             case R.id.loginBtn:
+
                 String getEmailId = emailid.getText().toString();
-                String getPassword = password.getText().toString();
+
+                //Use MD5 for to ecrypt the password
+                MD5Encryption encryption = new MD5Encryption(password.getText().toString());
+                String encryptionPassword = encryption.getEncryption();
+
+
+                //cpmpare the password and username pair by SharedPrefereces
                 SharedPreferences pref = getSharedPreferences("UserData", MODE_PRIVATE);
                 String password = pref.getString(getEmailId, "*****");
-                if (getPassword.equals(password)) {
+
+                if (encryptionPassword.equals(password)) {
                     Intent intent2 = new Intent(this, MenuActivity.class);
                     startActivity(intent2);
                 }else{

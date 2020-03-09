@@ -13,5 +13,14 @@ public class WaterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_water);
 
 
+}
+    public void toWaterActivity(View v){
+        Intent intent = new Intent(this, MapActivityWater.class);
+        startActivity(intent);
+    }
+    public void toWaterSafetyPage(View v){
+        Intent intent = new Intent(this, WaterSafety.class);
+        startActivity(intent);
+    }
 
-}}
+}

@@ -26,7 +26,7 @@ public class MenuActivity extends AppCompatActivity {
         return intent;
     }
 
-    public void toCityPage(View v) {
+    public void toActivityPage(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

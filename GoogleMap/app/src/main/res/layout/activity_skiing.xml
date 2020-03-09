@@ -8,40 +8,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
-            android:id="@+id/camping_tips"
+            android:id="@+id/skiing_tips"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="40dp"
-            android:text="Camping Safety Tips"
+            android:text="Camping Safety Tips For Bignners"
             android:textAlignment="center"
             android:textColor="@color/white"
+            android:background="@drawable/pixel2"
             android:textSize="65px"
-            android:textStyle="bold"
-            android:background="@android:color/holo_blue_dark"/>
-
-
-        <TextView
-            android:id="@+id/camping_tips_source"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="From https://koa.com/blog/camping-safety-tips/"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorLink="@color/white"
-            android:textSize="24px"
-            android:autoLink="web"
-            android:paddingTop="10dp"
-            android:paddingBottom="5dp"
-            android:background="@android:color/holo_blue_dark"/>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:id="@+id/camping_tip1_separator"
-            android:visibility="visible"
-            android:background="@android:color/darker_gray"/>
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/camping_tip1_title"

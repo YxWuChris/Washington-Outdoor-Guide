@@ -8,6 +8,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/skiing_tips"
 
@@ -17,31 +18,11 @@
             android:text="Skiing Safety Tips For Bignners"
             android:textAlignment="center"
             android:textColor="@color/white"
+            android:background="@drawable/pixel2"
             android:textSize="65px"
-            android:textStyle="bold"
-            android:background="@android:color/holo_blue_dark"/>
+            android:textStyle="bold"></TextView>
 
 
-        <TextView
-            android:id="@+id/skiing_tips_source"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="From https://www.skimag.com/ski-performance/top-10-tips-beginners"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textColorLink="@color/white"
-            android:textSize="24px"
-            android:autoLink="web"
-            android:paddingTop="10dp"
-            android:paddingBottom="5dp"
-            android:background="@android:color/holo_blue_dark"/>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:id="@+id/skiing_tip1_separator"
-            android:visibility="visible"
-            android:background="@android:color/darker_gray"/>
 
         <TextView
             android:id="@+id/skiing_tip1_title"
@@ -67,6 +48,7 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
+
             />
 
         <TextView
@@ -231,7 +213,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="• Proper fitting boots are the most important item on that list.."
+            android:text="• Proper fitting boots are the most important item on that list."
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -243,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="• You should also rent or buy a pair of snowpants.."
+            android:text="• You should also rent or buy a pair of snowpants."
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -294,7 +276,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="• Look for resorts that have excellent grooming, family programs, and ski schools.."
+            android:text="• Look for resorts that have excellent grooming, family programs, and ski schools."
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -336,7 +318,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="• Try to fall to your side versus forwards or backwards, which might make you twist something. ."
+            android:text="• Try to fall to your side versus forwards or backwards, which might make you twist something."
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -400,7 +382,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="• Really honing your technique before you head to a blue (intermediate) will only make you a better skier overall. ."
+            android:text="• Really honing your technique before you head to a blue (intermediate) will only make you a better skier overall."
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16sp"

@@ -16,6 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "TYPE";
+    public static final String COL_4 = "NOTE";
 
 
     public DBHelper(Context context) {
@@ -24,7 +25,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, NAME TEXT unique, TYPE TEXT)");
+        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY, NAME TEXT unique, TYPE TEXT, NOTE TEXT)");
     }
 
     @Override
@@ -38,6 +39,8 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,name);
         contentValues.put(COL_3,type);
+        contentValues.put(COL_4,"");
+
         long result = db.insertWithOnConflict(TABLE_NAME,null ,contentValues , SQLiteDatabase.CONFLICT_REPLACE);
         if(result == -1)
             return false;
@@ -50,11 +53,19 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from "+TABLE_NAME,null);
         return res;
     }
+    public void updateNote(String name, String input){
+        ContentValues newValues = new ContentValues();
+        newValues.put(COL_4, input);
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] args = new String[]{name};
+        db.update(TABLE_NAME,newValues,"NAME=?",args);
+
+    }
 
 
     public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME, "ID = ?",new String[] {id});
+        return db.delete(TABLE_NAME, "NAME = ?",new String[] {id});
     }
 
     public void DeleteAll(){
@@ -64,6 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
     }
+
 
 
 }

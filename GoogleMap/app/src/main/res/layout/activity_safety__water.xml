@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/skiing_tips"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:text="Water Sports Safety Tips For Bignners"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@drawable/pixel2"
+            android:textSize="65px"
+            android:textStyle="bold"></TextView>
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/skiing_tips_source"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="https://lasvegaswatersports.com/watersports/10-water-safety-tips-everyone-needs-know/"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorLink="@color/white"-->
+<!--            android:textSize="24px"-->
+<!--            android:autoLink="web"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            android:background="@android:color/holo_blue_dark"/>-->
+
+
+        <TextView
+            android:id="@+id/skiing_tip1_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. CPR"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip1_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip1"
+            />
+
+        <TextView
+            android:id="@+id/skiing_tip1_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• At least one or two people in a group gathering should have knowledge of CPR and how to perform it."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/camping_tip1_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="•  Always remember to call 911 in the case CPR is being used in an emergency situation."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tip2_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. LIFE JACKET"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip2_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip2"/>
+
+        <TextView
+            android:id="@+id/skiing_tip2_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• For biginer swimer, always be wearing a life jacket certified by the U.S. Coast Guard. "
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/camping_tip2_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• While on a boat, every individual on board should be wearing a life jacket no matter the age."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip3_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. CHILDREN SUPERISION"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:layout_marginTop="60dp"
+            android:textSize="50px"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip3_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip3"/>
+
+        <TextView
+            android:id="@+id/skiing_tip3_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Just because a child is wearing a lifejacket or in a floatation device, there is always the risk of that equipment failing."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip3_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Make sure there is constant adult supervision and that a child is kept within arm’s reach at all times."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip4_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. BUDDY SYSTEM"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip4_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip4"/>
+
+        <TextView
+            android:id="@+id/skiing_tip4_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Never swim alone in natural bodies of water! Always stick with the buddy system."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip5_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. SHORELINE VISIBILITY"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip5_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip5"/>
+
+        <TextView
+            android:id="@+id/skiing_tip5_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• While swimming in larger bodies of water, be aware of how far away the shoreline is."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip5_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="•  There are reasons why certain areas are blocked off from swimming, and although it may be tempting to investigate, it could be potentially dangerous."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/skiing_tip6_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. HYPOTHERMIA"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/skiing_tip6_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip6"/>
+
+        <TextView
+            android:id="@+id/skiing_tip6_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Although temperatures outside of the water are high, water temperatures can still be under 60 degrees F."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip6_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• If you or someone begins to complain or muscle cramps or shivers, immediately get out of the water and warm up."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+        <TextView
+            android:id="@+id/skiing_tip7_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. INGESTING WATER"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="50px"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/skiing_tip7_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/water_tip7"/>
+
+        <TextView
+            android:id="@+id/skiing_tip7_para1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="•  Whether it is a pool or natural body of water, ingesting the water can be dangerous. "
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+        <TextView
+            android:id="@+id/skiing_tip7_para2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="• Harmful organisms and chemicals can be present which can make someone very ill and could be potentially fatal."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

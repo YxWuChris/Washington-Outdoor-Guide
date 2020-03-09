@@ -83,14 +83,21 @@ public class SignUpActivity  extends AppCompatActivity implements OnClickListene
 
         switch (v.getId()) {
             case R.id.signUpBtn:
+
+
+
                 if(checkValidation()) {
                     String getEmailId = emailId.getText().toString();
                     String getPassword = password.getText().toString();
+
+                    MD5Encryption encryption = new MD5Encryption(password.getText().toString());
+                    String encryptionPassword = encryption.getEncryption();
+
                     SharedPreferences.Editor editor = getSharedPreferences("UserData", MODE_PRIVATE).edit();
-                    editor.putString(getEmailId, getPassword);
-                    System.out.println(getEmailId);
-                    System.out.println(getPassword);
+                    editor.putString(getEmailId, encryptionPassword);
+
                     editor.commit();
+
                     Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(this, LoginActivity.class);
                     startActivity(intent);

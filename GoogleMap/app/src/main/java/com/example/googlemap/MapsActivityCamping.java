@@ -1,51 +1,65 @@
 package com.example.googlemap;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
-
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.ByteArrayInputStream;
+import java.net.URI;
+import java.util.List;
+
 public class MapsActivityCamping extends FragmentActivity implements OnMapReadyCallback,OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private Marker myMarker_1, myMarker_2,myMarker_3,myMarker_4,myMarker_5;
+    private List<MarkerInfo> markerInfo;
     private TextView tvSpotInfo;
     private Button btnAdd;
     private Button btnDone;
+    private Button toPlan;
     private DBHelper myDb;
     public static Marker myMarker;
     private ImageView img;
+    private DataBaseAcess dataBaseAcess;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps_camping);
+        setContentView(R.layout.activity_map_water);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         tvSpotInfo = (TextView) findViewById(R.id.spotInfo);
         btnAdd = (Button) findViewById(R.id.Add);
         btnDone = (Button) findViewById(R.id.Done);
+        toPlan = (Button)findViewById(R.id.seePlan);
         btnAdd.setVisibility(View.INVISIBLE);
         btnDone.setVisibility(View.INVISIBLE);
         myDb = new DBHelper(this);
+
         img= (ImageView) findViewById(R.id.safety);
     }
 
@@ -54,73 +68,68 @@ public class MapsActivityCamping extends FragmentActivity implements OnMapReadyC
         mMap = googleMap;
 
 
-        // Add a marker in Sydney, Australia, and move the camera.
-        //LatLng seattle = new LatLng(47.608, -122.335);
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        // mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        LatLng royal_basin_campsite = new LatLng(47.833244, -123.211992);
-        LatLng lake_pleasant_rv_park = new LatLng(47.791633, -122.214642);
-        LatLng park_lake_day_camp = new LatLng(47.512806, -122.343582);
-        LatLng harry_osbourne_cowboy_campsite = new LatLng(48.548041, -121.979707);
-        LatLng cle_elum_river_group_site = new LatLng(47.456457, -121.126053);
+
 
         CameraUpdate center=
-                CameraUpdateFactory.newLatLng(new LatLng(47.608, -122.335));
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(6);
+                CameraUpdateFactory.newLatLng(new LatLng(47.65, -122.1));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(10);
 
         mMap.setOnMarkerClickListener(this);
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
+        DataBaseAcess dataBaseAcess = DataBaseAcess.getInstance(getApplicationContext());
+        dataBaseAcess.open();
 
-        myMarker_1 = googleMap.addMarker(new MarkerOptions()
-                .position(royal_basin_campsite)
-                .title("royal basin campsite")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        markerInfo = dataBaseAcess.setMarkers("Nature");
+        for(int i = 0; i<markerInfo.size();i++){
+            Marker marker;
+            LatLng newLocation = new LatLng(markerInfo.get(i).getlat(),markerInfo.get(i).getlongt());
+            if(markerInfo.get(i).getType().equals("Camping")){
+                marker = googleMap.addMarker(new MarkerOptions().position(newLocation)
+                        .title(markerInfo.get(i).getName()).snippet("Camping")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_nature_camping)));
 
-        myMarker_2 = googleMap.addMarker(new MarkerOptions()
-                .position(lake_pleasant_rv_park)
-                .title("lake pleasant rv park")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+            }else if(markerInfo.get(i).getType().equals("Hiking")){
+                marker = googleMap.addMarker(new MarkerOptions().position(newLocation)
+                        .title(markerInfo.get(i).getName()).snippet("Hiking")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_nature_hiking)));
 
-        myMarker_3 = googleMap.addMarker(new MarkerOptions()
-                .position(park_lake_day_camp)
-                .title("park lake day camp")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+            }else if(markerInfo.get(i).getType().equals("Biking")){
+                marker = googleMap.addMarker(new MarkerOptions().position(newLocation)
+                        .title(markerInfo.get(i).getName()).snippet("Biking")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_nature_biking)));
 
-        myMarker_4 = googleMap.addMarker(new MarkerOptions()
-                .position(harry_osbourne_cowboy_campsite)
-                .title("harry osbourne cowboy campsite")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+            }else if(markerInfo.get(i).getType().equals("Fishing")) {
+                marker = googleMap.addMarker(new MarkerOptions().position(newLocation)
+                        .title(markerInfo.get(i).getName()).snippet("Fishing")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_nature_fishing)));
 
-        myMarker_5 = googleMap.addMarker(new MarkerOptions()
-                .position(cle_elum_river_group_site)
-                .title("cle elum river group site")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+            }
+        }
+
     }
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        if(marker.equals(myMarker_1)) img.setImageResource(R.drawable.royal_basin_campsite);
-        else if(marker.equals(myMarker_2)) img.setImageResource(R.drawable.lake_pleasant_rv_park);
-        else if(marker.equals(myMarker_3)) img.setImageResource(R.drawable.park_lake_day_camp);
-        else if(marker.equals(myMarker_4)) img.setImageResource(R.drawable.harry_osbourne_cowboy_campsite);
-        else if(marker.equals(myMarker_5)) img.setImageResource(R.drawable.cle_elum_river_group_site);
-        tvSpotInfo.setText(marker.getTitle());
+
+        dataBaseAcess = DataBaseAcess.getInstance(getApplicationContext());
+        dataBaseAcess.open();
+        byte[] imageByte = dataBaseAcess.searchImageFromDB("Nature",marker.getTitle());
+        showImageFromByte(imageByte);
+        tvSpotInfo.setText(marker.getSnippet()+" Spot:  "+ marker.getTitle());
         btnAdd.setVisibility(View.VISIBLE);
         btnDone.setVisibility(View.VISIBLE);
         myMarker = marker;
+        toPlan.setVisibility(View.GONE);
+
 
         return true;
     }
 
-    public void addPlan(View v){
-        boolean isInserted = myDb.insertData(myMarker.getTitle(),"Camping");
-       if(isInserted == true) System.out.println("DB works!!!!!!!");
 
-    }
 
     public void toPlanActivity(View v){
         Intent intent = new Intent(this, PlanActivity.class);
@@ -129,17 +138,37 @@ public class MapsActivityCamping extends FragmentActivity implements OnMapReadyC
     }
 
     public void getInfo(View v){
+
+
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        if (myMarker.getTitle().equals("royal basin campsite")) intent.setData(Uri.parse("https://www.nps.gov/olym/planyourvisit/royal-basin.htm"));
-        else if (myMarker.getTitle().equals("lake pleasant rv park")) intent.setData(Uri.parse("https://www.goodsam.com/campgrounds-rv-parks/washington/bothell/lake-pleasant-rv-park-890001015/"));
-        else if (myMarker.getTitle().equals("park lake day camp")) intent.setData(Uri.parse("https://www.manta.com/d/mm6zncx/park-lake-day-camp"));
-        else if (myMarker.getTitle().equals("harry osbourne cowboy campsite")) intent.setData(Uri.parse("https://thedyrt.com/camping/washington/harry-o-s-cowboy-camp"));
-        else if (myMarker.getTitle().equals("cle elum river group site")) intent.setData(Uri.parse("https://www.recreation.gov/camping/campgrounds/233682"));
+
+        dataBaseAcess = DataBaseAcess.getInstance(getApplicationContext());
+        dataBaseAcess.open();
+        String website = dataBaseAcess.searchWebsiteFromDB("Nature",myMarker.getTitle());
+        intent.setData(Uri.parse(website));
+
+
+
         startActivity(intent);
     }
+    public void addPlan(View v){
+        boolean isInserted = myDb.insertData(myMarker.getTitle(),"Nature");
+        Toast toast = Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
+        toast.show();
+    }
 
+    public void showImageFromByte(byte[] photo){
 
+        ByteArrayInputStream imageStream = new ByteArrayInputStream(photo);
+        Bitmap bitmap= BitmapFactory.decodeStream(imageStream);
+        img.setImageBitmap(bitmap);
 
     }
+
+
+
+
+}
