@@ -24,6 +24,7 @@ public class PlanActivity extends AppCompatActivity implements SpotAdapter.OnNot
 
     DBHelper myDb;
     private List<Spot> SpotList=new ArrayList<>();
+    SpotAdapter spotAdapter;
 
 
 
@@ -36,7 +37,7 @@ public class PlanActivity extends AppCompatActivity implements SpotAdapter.OnNot
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.Recycler_View);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        SpotAdapter spotAdapter=new SpotAdapter(SpotList,this);
+        spotAdapter=new SpotAdapter(SpotList,this);
         recyclerView.setAdapter(spotAdapter);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
@@ -87,8 +88,8 @@ public class PlanActivity extends AppCompatActivity implements SpotAdapter.OnNot
             String name = SpotList.get(position).getName();
             myDb.deleteData (name);
             SpotList.remove(position);
-//            spotAdapter.notifyDataSetChanged();
-
+           // notifyDataSetChanged();
+            spotAdapter.notifyDataSetChanged();
         }
     };
 
